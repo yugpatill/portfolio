@@ -24,13 +24,13 @@ export default function SectionDots() {
 
   return (
     <div
+      className="hidden md:flex"
       style={{
         position: "fixed",
         right: "1.25rem",
         top: "50%",
         transform: "translateY(-50%)",
         zIndex: 50,
-        display: "flex",
         flexDirection: "column",
         gap: "0.75rem",
         alignItems: "center",

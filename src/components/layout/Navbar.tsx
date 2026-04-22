@@ -175,51 +175,82 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      {/* Mobile drawer */}
+      {/* Mobile drawer — full screen overlay */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed inset-y-0 right-0 z-40 w-64 flex flex-col pt-24 pb-8 px-6"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.22, ease: "easeOut" }}
+            className="fixed inset-0 z-40 flex flex-col md:hidden"
             style={{
-              background: "var(--nav-bg-scrolled)",
-              backdropFilter: "blur(40px)",
-              borderLeft: "1px solid var(--border-card)",
+              background: "rgba(4,6,18,0.97)",
+              backdropFilter: "blur(24px)",
+              WebkitBackdropFilter: "blur(24px)",
+              paddingTop: "5rem",
+              paddingBottom: "2rem",
+              paddingLeft: "2rem",
+              paddingRight: "2rem",
             }}
           >
-            <div className="flex flex-col">
+            {/* Nav items */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem", flex: 1 }}>
               {NAV_ITEMS.map((item, i) => (
                 <motion.button
                   key={item.href}
                   onClick={() => handleNav(item.href)}
-                  initial={{ opacity: 0, x: 16 }}
+                  initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.07 }}
-                  className="text-left py-4 text-sm font-medium bg-transparent border-0 cursor-pointer border-b flex items-center gap-2"
+                  transition={{ delay: i * 0.06, duration: 0.2 }}
                   style={{
-                    color: "var(--text-primary)",
-                    borderColor: "var(--border-card)",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.875rem",
+                    padding: "1rem 0",
+                    background: "transparent",
+                    border: "none",
+                    borderBottom: "1px solid rgba(255,255,255,0.06)",
+                    cursor: "pointer",
+                    textAlign: "left",
+                    width: "100%",
+                    color: "rgba(255,255,255,0.85)",
+                    fontSize: "1.1rem",
+                    fontWeight: 500,
+                    fontFamily: "var(--font-space-grotesk)",
                   }}
                 >
-                  <span className="text-xs font-mono text-purple-400">{item.num}.</span>
+                  <span style={{ fontSize: "0.75rem", fontFamily: "monospace", color: "#a855f7", minWidth: "2rem" }}>
+                    {item.num}.
+                  </span>
                   {item.label}
                 </motion.button>
               ))}
             </div>
+
+            {/* Resume button */}
             <motion.a
               href="https://drive.google.com/drive/folders/1YaF8lHN9xqHpHzkPoOZAL6hC3UoynIC-?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.38 }}
-              className="mt-8 py-2.5 text-center text-sm font-medium text-purple-400 rounded"
-              style={{ border: "1px solid #a855f7" }}
+              transition={{ delay: 0.42 }}
+              style={{
+                display: "block",
+                marginTop: "1.5rem",
+                padding: "0.9rem",
+                textAlign: "center",
+                fontSize: "0.95rem",
+                fontWeight: 600,
+                color: "#a855f7",
+                border: "1px solid rgba(168,85,247,0.4)",
+                borderRadius: "8px",
+                textDecoration: "none",
+                fontFamily: "var(--font-space-grotesk)",
+              }}
             >
-              Resume
+              View Resume
             </motion.a>
           </motion.div>
         )}
@@ -232,7 +263,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setMobileOpen(false)}
-            className="fixed inset-0 z-30 bg-black/50 md:hidden"
+            className="fixed inset-0 z-30 md:hidden"
           />
         )}
       </AnimatePresence>
