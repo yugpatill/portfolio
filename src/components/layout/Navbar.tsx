@@ -71,17 +71,20 @@ export default function Navbar() {
           >
             <span
               style={{
-                fontFamily: "var(--font-orbitron)",
-                fontSize: "1.4rem",
-                fontWeight: 600,
+                fontFamily: "monospace",
+                fontSize: "1.1rem",
+                fontWeight: 700,
+                letterSpacing: "0.02em",
+              }}
+            >
+              <span style={{ color: "#a855f7" }}>{`{`}</span>
+              <span style={{
                 background: "linear-gradient(135deg, #a855f7, #3b82f6)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
-                letterSpacing: "0.04em",
-              }}
-            >
-              yp
+              }}>yp</span>
+              <span style={{ color: "#3b82f6" }}>{`}`}</span>
             </span>
           </motion.button>
 
