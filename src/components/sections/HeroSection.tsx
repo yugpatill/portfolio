@@ -18,6 +18,7 @@ const socials = [
 
 const TYPING_WORDS = [
   "ML Engineer",
+  "AI Engineer",
   "Data Scientist",
   "GenAI Developer",
   "Python Developer",
