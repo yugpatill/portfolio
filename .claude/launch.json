@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ops-copilot",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "/Users/yugandharpatil/Downloads/personal_ops_copilot/frontend",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "3010"
+      ],
+      "port": 3010
+    }
+  ]
+}

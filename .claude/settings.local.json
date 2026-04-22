@@ -1,7 +1,43 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(npm install:*)",
+      "Bash(curl -sfL \"https://cdn.simpleicons.org/python/white\" -o /tmp/python_test.svg)",
+      "Read(//tmp/**)",
+      "Bash(npm run:*)",
+      "Bash(node -e \"const si = require\\('/Users/yugandharpatil/Downloads/portfolio/node_modules/react-icons/si'\\); const icons = Object.keys\\(si\\); const targets = ['amazon','aws','tableau','xgboost','mlflow','kaggle','databricks','bigquery','fastapi','helm','flink','hugging','langchain','gnubash','plotly','streamlit','grafana','openai','scikitlearn']; targets.forEach\\(t => { const matches = icons.filter\\(i => i.toLowerCase\\(\\).includes\\(t\\)\\); console.log\\(t + ':', matches.slice\\(0,5\\).join\\(', '\\)\\); }\\)\")",
+      "Bash(node -e \"const si = require\\('/Users/yugandharpatil/Downloads/portfolio/node_modules/react-icons/si'\\); const icons = Object.keys\\(si\\); ['amazon','aws','tableau','xgboost','terraform','azure','scale','google','pytorch','spark','airflow','kafka','dbt','mongo','redis','docker','kube','python'].forEach\\(t => { const matches = icons.filter\\(i => i.toLowerCase\\(\\).includes\\(t\\)\\); console.log\\(t + ':', matches.slice\\(0,5\\).join\\(', '\\)\\); }\\)\")",
+      "Bash(node -e \"const si = require\\('/Users/yugandharpatil/Downloads/portfolio/node_modules/react-icons/si'\\); const icons = Object.keys\\(si\\); ['microsoft','azure','amazon','aws','xg','cloud','tableau','scala','Scala','R,','SiR'].forEach\\(t => { const matches = icons.filter\\(i => i.toLowerCase\\(\\).includes\\(t.toLowerCase\\(\\)\\)\\); console.log\\(t + ':', matches.slice\\(0,6\\).join\\(', '\\)\\); }\\); console.log\\('SiR exists:', 'SiR' in si\\);\")",
+      "Bash(node -e \"const si = require\\('/Users/yugandharpatil/Downloads/portfolio/node_modules/react-icons/si'\\); const all = Object.keys\\(si\\); console.log\\('Total:', all.length\\); ['SiAws','SiAmazon','SiAmazons3','SiGooglecloud','SiGcp','SiMicrosoft','SiAzure','SiXgboost','SiTableau','SiR,'].forEach\\(k => console.log\\(k, k in si\\)\\); console.log\\(all.filter\\(i => i.startsWith\\('SiAm'\\)\\)\\); console.log\\(all.filter\\(i => i.startsWith\\('SiMi'\\)\\)\\);\")",
+      "Bash(node -e \"const fa = require\\('/Users/yugandharpatil/Downloads/portfolio/node_modules/react-icons/fa'\\); const all = Object.keys\\(fa\\); ['aws','amazon','microsoft','azure','tableau','xgboost'].forEach\\(t => { const m = all.filter\\(i => i.toLowerCase\\(\\).includes\\(t\\)\\); console.log\\(t, m.slice\\(0,5\\)\\); }\\);\")",
+      "Bash(node -e \"const si = require\\('/Users/yugandharpatil/Downloads/portfolio/node_modules/react-icons/si'\\); ['SiPowerbi','SiScipy','SiAnaconda','SiNumpy','SiPandas','SiJupyter'].forEach\\(k => console.log\\(k, k in si\\)\\);\")",
+      "Bash(node -e \"const si = require\\('/Users/yugandharpatil/Downloads/portfolio/node_modules/react-icons/si'\\); const fa = require\\('/Users/yugandharpatil/Downloads/portfolio/node_modules/react-icons/fa'\\); console.log\\('SiLinkedin:', 'SiLinkedin' in si\\); console.log\\('SiKaggle:', 'SiKaggle' in si\\); const siKeys = Object.keys\\(si\\); console.log\\('linkedin:', siKeys.filter\\(i => i.toLowerCase\\(\\).includes\\('link'\\)\\)\\); console.log\\('kaggle:', siKeys.filter\\(i => i.toLowerCase\\(\\).includes\\('kagg'\\)\\)\\); const faKeys = Object.keys\\(fa\\); console.log\\('fa-linkedin:', faKeys.filter\\(i => i.toLowerCase\\(\\).includes\\('linkedin'\\)\\)\\);\")",
+      "Bash(node -e \"const si = require\\('/Users/yugandharpatil/Downloads/portfolio/node_modules/react-icons/si'\\); ['SiGit','SiNumpy','SiPandas','SiJupyter','SiFlask','SiMysql','SiGoogle','SiCoursera','SiMatplotlib','SiSeaborn'].forEach\\(k => console.log\\(k, k in si\\)\\);\")",
+      "Bash(ollama --version)",
+      "Bash(ollama serve *)",
+      "Bash(ollama list *)",
+      "Bash(python3 -m venv .venv)",
+      "Bash(.venv/bin/pip install *)",
+      "Bash(.venv/bin/python -c \"from app.main import app; print\\('imports ok'\\)\")",
+      "Bash(.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8765)",
+      "Bash(curl -sS http://127.0.0.1:8765/api/health)",
+      "Bash(curl -sN -X POST http://127.0.0.1:8765/api/chat/stream -H \"Content-Type: application/json\" -d '{\"message\":\"What is sqrt\\(144\\) + 5?\"}')",
+      "Bash(rmdir frontend *)",
+      "Bash(npx --yes create-next-app@latest frontend --ts --tailwind --eslint --app --src-dir --import-alias \"@/*\" --turbopack --use-npm --no-git --yes)",
+      "Bash(npm run *)",
+      "Bash(echo \"started, pid=$!\")",
+      "Read(//private/tmp/**)",
+      "Bash(kill 50523)",
+      "Bash(lsof -ti:3001)",
+      "Bash(xargs kill *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(lsof -ti:8765)",
+      "Bash(code /Users/yugandharpatil/Downloads/personal_ops_copilot)",
+      "Bash(node -e \"try { const { SiAnthropic } = require\\('/Users/yugandharpatil/Downloads/portfolio/node_modules/react-icons/si'\\); console.log\\('SiAnthropic:', !!SiAnthropic\\); } catch\\(e\\) { console.log\\('error:', e.message\\); }\")",
+      "Bash(node -e \"try { const { SiGoogle } = require\\('/Users/yugandharpatil/Downloads/portfolio/node_modules/react-icons/si'\\); console.log\\('SiGoogle:', !!SiGoogle\\); } catch\\(e\\) { console.log\\('error:', e.message\\); }\")",
+      "Bash(npx tsc *)",
+      "Bash(node -e \"const si = require\\('/Users/yugandharpatil/Downloads/portfolio/node_modules/react-icons/si/index.js'\\); const check = ['SiPython','SiPandas','SiNumpy','SiTensorflow','SiPytorch','SiScikitlearn','SiDocker','SiFastapi','SiPostgresql','SiMysql','SiTableau','SiJupyter','SiGithub','SiFlask','SiR','SiKeras','SiApachespark','SiDatabricks']; check.forEach\\(n => console.log\\(n, si[n] ? '✓' : '✗'\\)\\);\")"
     ]
   }
 }
