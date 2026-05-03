@@ -17,11 +17,11 @@ export default function Home() {
       <Navbar />
       <main>
         <div className="snap-section" style={{ padding: 0, justifyContent: "center" }}><HeroSection /></div>
-        <div className="snap-section" style={{ paddingTop: "4.5rem", justifyContent: "center" }}><ProjectsSection /></div>
-        <div className="snap-section" style={{ paddingTop: "4.5rem", justifyContent: "center" }}><SkillsSection /></div>
-        <div className="snap-section" style={{ paddingTop: "4.5rem", justifyContent: "center" }}><CertificationsSection /></div>
-        <div className="snap-section" style={{ paddingTop: "4.5rem", justifyContent: "center" }}><EducationSection /></div>
-        <div className="snap-section" style={{ paddingTop: "4.5rem", justifyContent: "space-between" }}>
+        <div className="snap-section section-pt" style={{ justifyContent: "center" }}><ProjectsSection /></div>
+        <div className="snap-section section-pt" style={{ justifyContent: "center" }}><SkillsSection /></div>
+        <div className="snap-section section-pt" style={{ justifyContent: "center" }}><CertificationsSection /></div>
+        <div className="snap-section section-pt" style={{ justifyContent: "center" }}><EducationSection /></div>
+        <div className="snap-section section-pt" style={{ justifyContent: "space-between" }}>
           <div style={{ flex: 1, display: "flex", alignItems: "center" }}>
             <ContactSection />
           </div>

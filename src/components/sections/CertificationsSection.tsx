@@ -24,7 +24,7 @@ const issuerIconMap: Record<string, { icon: IconType; color: string }> = {
 export default function CertificationsSection() {
   return (
     <section id="certifications" style={{ width: "100%" }}>
-      <div style={containerStyle}>
+      <div style={containerStyle} className="mobile-px">
         <SectionHeading title="Certifications" />
 
         <motion.div
@@ -32,11 +32,7 @@ export default function CertificationsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "1.25rem",
-          }}
+          className="rg-4"
         >
           {certifications.map((cert) => {
             const issuer = issuerIconMap[cert.issuer];

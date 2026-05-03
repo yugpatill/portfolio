@@ -309,3 +309,62 @@ html.light-mode body::before {
 html.light-mode ::-webkit-scrollbar-track {
   background: #eef1ff;
 }
+
+/* ── Responsive grid utilities ── */
+.rg-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.rg-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+/* Section top padding utility */
+.section-pt {
+  padding-top: 4.5rem;
+}
+
+/* ── Tablet (≤1024px): 4-col → 2-col ── */
+@media (max-width: 1024px) {
+  .rg-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Mobile (≤640px) ── */
+@media (max-width: 640px) {
+  /* Disable scroll snap — feels janky on phones */
+  html {
+    scroll-snap-type: none;
+  }
+  .snap-section {
+    scroll-snap-align: none;
+    min-height: unset;
+  }
+  .section-pt {
+    padding-top: 2.5rem;
+  }
+
+  /* Single-column grids */
+  .rg-4,
+  .rg-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Slightly smaller buttons so two fit side-by-side */
+  .btn-primary,
+  .btn-outline {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  /* Tighter horizontal padding on section containers */
+  .mobile-px {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}

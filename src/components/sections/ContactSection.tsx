@@ -180,7 +180,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" style={{ width: "100%" }}>
-      <div style={{ width: "100%", maxWidth: "720px", margin: "0 auto", padding: "4rem 3rem" }}>
+      <div style={{ width: "100%", maxWidth: "720px", margin: "0 auto", padding: "4rem 2rem" }} className="mobile-px">
 
         {/* Label */}
         <motion.p

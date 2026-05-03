@@ -18,11 +18,12 @@ const containerStyle: React.CSSProperties = {
   gap: "1.75rem",
 };
 
+
 export default function ProjectsSection() {
   return (
     <section id="projects" style={{ width: "100%" }}>
       <MarqueeStrip />
-      <div style={containerStyle}>
+      <div style={containerStyle} className="mobile-px">
         <SectionHeading title="Projects" />
 
         <motion.div
@@ -30,11 +31,7 @@ export default function ProjectsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "1.25rem",
-          }}
+          className="rg-4"
         >
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />

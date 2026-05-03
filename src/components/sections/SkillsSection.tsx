@@ -68,7 +68,7 @@ const categories: SkillCategory[] = [
 export default function SkillsSection() {
   return (
     <section id="skills" style={{ width: "100%" }}>
-      <div style={containerStyle}>
+      <div style={containerStyle} className="mobile-px">
 
         {/* Heading */}
         <div style={{ textAlign: "center" }}>
@@ -97,7 +97,7 @@ export default function SkillsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1.25rem" }}
+          className="rg-4"
         >
           {categories.map((cat) => (
             <SkillCard key={cat.name} cat={cat} />

@@ -46,6 +46,7 @@ export default function EducationSection() {
   return (
     <section id="education" style={{ width: "100%" }}>
       <div
+        className="mobile-px"
         style={{
           width: "100%",
           padding: "0 5%",
@@ -62,7 +63,7 @@ export default function EducationSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1.25rem" }}
+          className="rg-2"
         >
           {education.map((edu) => (
             <EduCard key={edu.school} edu={edu} />

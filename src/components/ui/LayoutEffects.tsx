@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import dynamic from "next/dynamic";
 
 const GradientOrbs  = dynamic(() => import("@/components/ui/GradientOrbs"),    { ssr: false });
-const CursorGlow    = dynamic(() => import("@/components/ui/CursorGlow"),      { ssr: false });
 const NoiseOverlay  = dynamic(() => import("@/components/ui/NoiseOverlay"),    { ssr: false });
 
 export default function LayoutEffects() {
@@ -20,7 +19,6 @@ export default function LayoutEffects() {
   return (
     <>
       <GradientOrbs />
-      <CursorGlow />
       <NoiseOverlay />
     </>
   );
