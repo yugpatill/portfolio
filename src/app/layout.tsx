@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, Orbitron } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import LayoutEffects from "@/components/ui/LayoutEffects";
 import "./globals.css";
 
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body>
         <LayoutEffects />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
